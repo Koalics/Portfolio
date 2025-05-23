@@ -21,6 +21,10 @@ body {
   background: var(--bg-color-10);
 }
 
+.body--fixed {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -90,6 +94,7 @@ body {
   line-height: normal;
   letter-spacing: 2px;
   transition: all var(--transition);
+  background: transparent;
 }
 
 .button:hover {
@@ -232,7 +237,7 @@ body {
 
 .hero__info {
   text-align: center;
-  background: url(/images/Фон\ для\ hero.png) no-repeat center;
+  background: url(../images/hero-bg.png) no-repeat center;
 }
 
 .hero__info-avatar {
@@ -388,6 +393,11 @@ body {
     transition: opacity var(--transition), visibility var(--transition);
   }
 
+    .overlay--visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
   .header__right {
     position: fixed;
     top: 0;
@@ -488,6 +498,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 48px;
+  margin-bottom: 40px;
 }
 
 .portfolio__cards-item {
@@ -499,6 +510,10 @@ body {
 
 .portfolio__cards-item:hover {
   transform: translateY(-5%);
+}
+
+.portfolio__cards-item:nth-child(2n) {
+  display: none;
 }
 
 .portfolio__cards-img {
@@ -526,6 +541,11 @@ body {
   line-height: normal;
   letter-spacing: 2.4px;
   padding: 40px 48px;
+}
+
+.portfolio__cards-btn {
+  display: block;
+  margin: 0 auto;
 }
 
 /* ====================================================== */
@@ -840,7 +860,6 @@ body {
 }
 
 .contacts__left-button {
-  background: transparent;
   margin-top: 24px;
 }
 
