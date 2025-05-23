@@ -131,6 +131,10 @@ body {
   color: var(--text-color-20);
 }
 
+.breadcrumbs__items path {
+  fill: var(--text-color-10);
+}
+
 .hidden {
   font-size: 0;
   visibility: hidden;
